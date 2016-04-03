@@ -1,0 +1,9 @@
+package pat.game.Tetris;
+
+//Lance l'interface graphique
+public class App {
+	public static void main(String[] args) {
+		TetrisGame game = new TetrisGame();
+		new TetrisGUI(game);
+	}
+}

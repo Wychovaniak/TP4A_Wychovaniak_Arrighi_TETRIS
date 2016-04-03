@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1-dev-20150306-5afe4d1" sequence="1" timestamp="1459688352375" analysisTimestamp="1459688335836" release="">
+  <Project projectName="Tetris">
+    <Jar>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\target\classes</Jar>
+    <Jar>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\target\test-classes</Jar>
+    <AuxClasspathEntry>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\target\test-classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Alexis\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_73\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\src\main\java</SrcDir>
+    <SrcDir>C:\Users\Alexis\Desktop\tetrisopti\OptiTetris\Tetris\src\test\java</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="pat.game.Tetris.Block">
+      <SourceLine classname="pat.game.Tetris.Block" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.Block" name="getModel" signature="()[[Lpat/game/Tetris/FieldCell;" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.Block" start="8" end="8" startBytecode="0" endBytecode="46" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+    </Method>
+    <Field classname="pat.game.Tetris.Block" name="model" signature="[[Lpat/game/Tetris/FieldCell;" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.Block" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+    </Field>
+    <SourceLine classname="pat.game.Tetris.Block" start="8" end="8" startBytecode="4" endBytecode="4" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+    <SourceLine classname="pat.game.Tetris.Block" start="8" end="8" startBytecode="4" endBytecode="4" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+  </BugInstance>
+  <BugInstance type="NN_NAKED_NOTIFY" priority="2" rank="14" abbrev="NN" category="MT_CORRECTNESS" first="1">
+    <Class classname="pat.game.Tetris.GameThread">
+      <SourceLine classname="pat.game.Tetris.GameThread" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.GameThread" name="resumeThread" signature="()V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.GameThread" start="79" end="87" startBytecode="0" endBytecode="147" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.GameThread" start="84" end="84" startBytecode="27" endBytecode="27" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" rank="14" abbrev="UW" category="MT_CORRECTNESS" first="1">
+    <Class classname="pat.game.Tetris.GameThread">
+      <SourceLine classname="pat.game.Tetris.GameThread" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.GameThread" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.GameThread" start="21" end="70" startBytecode="0" endBytecode="649" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.GameThread" start="30" end="30" startBytecode="17" endBytecode="17" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="1" rank="14" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="pat.game.Tetris.PlayField">
+      <SourceLine classname="pat.game.Tetris.PlayField" sourcefile="PlayField.java" sourcepath="pat/game/Tetris/PlayField.java"/>
+    </Class>
+    <Field classname="pat.game.Tetris.PlayField" name="currentBlock" signature="Lpat/game/Tetris/Block;" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.PlayField" sourcefile="PlayField.java" sourcepath="pat/game/Tetris/PlayField.java"/>
+    </Field>
+    <Type descriptor="Lpat/game/Tetris/Block;" role="TYPE_FOUND">
+      <SourceLine classname="pat.game.Tetris.Block" start="8" end="186" sourcefile="Block.java" sourcepath="pat/game/Tetris/Block.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="1" rank="14" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="pat.game.Tetris.PlayField">
+      <SourceLine classname="pat.game.Tetris.PlayField" sourcefile="PlayField.java" sourcepath="pat/game/Tetris/PlayField.java"/>
+    </Class>
+    <Field classname="pat.game.Tetris.PlayField" name="playField" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.PlayField" sourcefile="PlayField.java" sourcepath="pat/game/Tetris/PlayField.java"/>
+    </Field>
+    <Type descriptor="Lpat/game/Tetris/FieldCell;" role="TYPE_FOUND">
+      <SourceLine classname="pat.game.Tetris.FieldCell" start="8" end="41" sourcefile="FieldCell.java" sourcepath="pat/game/Tetris/FieldCell.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" rank="14" abbrev="UW" category="MT_CORRECTNESS" first="1">
+    <Class classname="pat.game.Tetris.RepaintRunner">
+      <SourceLine classname="pat.game.Tetris.RepaintRunner" sourcefile="RepaintRunner.java" sourcepath="pat/game/Tetris/RepaintRunner.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.RepaintRunner" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.RepaintRunner" start="14" end="14" startBytecode="0" endBytecode="148" sourcefile="RepaintRunner.java" sourcepath="pat/game/Tetris/RepaintRunner.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.RepaintRunner" start="19" end="19" startBytecode="18" endBytecode="18" sourcefile="RepaintRunner.java" sourcepath="pat/game/Tetris/RepaintRunner.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="pat.game.Tetris.ScoreItem">
+      <SourceLine classname="pat.game.Tetris.ScoreItem" sourcefile="ScoreItem.java" sourcepath="pat/game/Tetris/ScoreItem.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.ScoreItem" name="compareTo" signature="(Lpat/game/Tetris/ScoreItem;)I" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.ScoreItem" start="42" end="42" startBytecode="0" endBytecode="95" sourcefile="ScoreItem.java" sourcepath="pat/game/Tetris/ScoreItem.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" rank="17" abbrev="ICAST" category="STYLE" first="1">
+    <Class classname="pat.game.Tetris.TetrisCanvas">
+      <SourceLine classname="pat.game.Tetris.TetrisCanvas" sourcefile="TetrisCanvas.java" sourcepath="pat/game/Tetris/TetrisCanvas.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.TetrisCanvas" name="blockInfo" signature="(Ljava/lang/String;Ljava/awt/Color;Lpat/game/Tetris/Block;)Ljava/awt/image/BufferedImage;" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.TetrisCanvas" start="125" end="177" startBytecode="0" endBytecode="883" sourcefile="TetrisCanvas.java" sourcepath="pat/game/Tetris/TetrisCanvas.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.TetrisCanvas" start="137" end="137" startBytecode="94" endBytecode="94" sourcefile="TetrisCanvas.java" sourcepath="pat/game/Tetris/TetrisCanvas.java"/>
+    <SourceLine classname="pat.game.Tetris.TetrisCanvas" start="137" end="137" startBytecode="94" endBytecode="94" sourcefile="TetrisCanvas.java" sourcepath="pat/game/Tetris/TetrisCanvas.java"/>
+  </BugInstance>
+  <BugInstance type="SC_START_IN_CTOR" priority="2" rank="14" abbrev="SC" category="MT_CORRECTNESS" first="1">
+    <Class classname="pat.game.Tetris.TetrisGUI">
+      <SourceLine classname="pat.game.Tetris.TetrisGUI" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.TetrisGUI" name="&lt;init&gt;" signature="(Lpat/game/Tetris/TetrisGame;)V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.TetrisGUI" start="26" end="91" startBytecode="0" endBytecode="611" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    </Method>
+    <Method classname="java.lang.Thread" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Thread"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.TetrisGUI" start="79" end="79" startBytecode="270" endBytecode="270" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    <SourceLine classname="pat.game.Tetris.TetrisGUI" start="79" end="79" startBytecode="270" endBytecode="270" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+  </BugInstance>
+  <BugInstance type="SC_START_IN_CTOR" priority="2" rank="14" abbrev="SC" category="MT_CORRECTNESS" first="1">
+    <Class classname="pat.game.Tetris.TetrisGUI">
+      <SourceLine classname="pat.game.Tetris.TetrisGUI" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.TetrisGUI" name="&lt;init&gt;" signature="(Lpat/game/Tetris/TetrisGame;)V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.TetrisGUI" start="26" end="91" startBytecode="0" endBytecode="611" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    </Method>
+    <Method classname="pat.game.Tetris.GameThread" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="pat.game.Tetris.GameThread" sourcefile="GameThread.java" sourcepath="pat/game/Tetris/GameThread.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.TetrisGUI" start="75" end="75" startBytecode="241" endBytecode="241" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+    <SourceLine classname="pat.game.Tetris.TetrisGUI" start="75" end="75" startBytecode="241" endBytecode="241" sourcefile="TetrisGUI.java" sourcepath="pat/game/Tetris/TetrisGUI.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" first="1">
+    <Class classname="pat.game.Tetris.TetrisGame">
+      <SourceLine classname="pat.game.Tetris.TetrisGame" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.TetrisGame" name="pushUP" signature="()V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.TetrisGame" start="223" end="234" startBytecode="0" endBytecode="264" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.TetrisGame" start="225" end="225" startBytecode="33" endBytecode="33" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    <SourceLine classname="pat.game.Tetris.TetrisGame" start="225" end="225" startBytecode="33" endBytecode="33" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" first="1">
+    <Class classname="pat.game.Tetris.TetrisGame">
+      <SourceLine classname="pat.game.Tetris.TetrisGame" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    </Class>
+    <Method classname="pat.game.Tetris.TetrisGame" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="pat.game.Tetris.TetrisGame" start="51" end="89" startBytecode="0" endBytecode="482" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+    </Method>
+    <SourceLine classname="pat.game.Tetris.TetrisGame" start="56" end="56" startBytecode="22" endBytecode="22" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+    <SourceLine classname="pat.game.Tetris.TetrisGame" start="56" end="56" startBytecode="22" endBytecode="22" sourcefile="TetrisGame.java" sourcepath="pat/game/Tetris/TetrisGame.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 3 Apr 2016 14:53:44 +0200" total_classes="21" referenced_classes="395" total_bugs="12" total_size="968" num_packages="1" java_version="1.8.0_73" vm_version="25.73-b02" cpu_seconds="36.36" clock_seconds="16.55" peak_mbytes="577.71" alloc_mbytes="910.50" gc_seconds="0.16" priority_2="10" priority_1="2">
+    <PackageStats package="pat.game.Tetris" total_bugs="12" total_types="21" total_size="968" priority_2="10" priority_1="2">
+      <ClassStats class="pat.game.Tetris.App" sourceFile="App.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.AppTest" sourceFile="AppTest.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.Block" sourceFile="Block.java" interface="false" size="117" bugs="1" priority_2="1"/>
+      <ClassStats class="pat.game.Tetris.FieldCell" sourceFile="FieldCell.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.GameThread" sourceFile="GameThread.java" interface="false" size="61" bugs="2" priority_2="2"/>
+      <ClassStats class="pat.game.Tetris.Movment" sourceFile="Movment.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.PlayField" sourceFile="PlayField.java" interface="false" size="36" bugs="2" priority_1="2"/>
+      <ClassStats class="pat.game.Tetris.RepaintRunner" sourceFile="RepaintRunner.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="pat.game.Tetris.ScoreItem" sourceFile="ScoreItem.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="pat.game.Tetris.TertimonosModel" sourceFile="TertimonosModel.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.Tetriminos" sourceFile="Tetriminos.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisCanvas" sourceFile="TetrisCanvas.java" interface="false" size="192" bugs="1" priority_2="1"/>
+      <ClassStats class="pat.game.Tetris.TetrisFocusListener" sourceFile="TetrisFocusListener.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisGUI" sourceFile="TetrisGUI.java" interface="false" size="109" bugs="2" priority_2="2"/>
+      <ClassStats class="pat.game.Tetris.TetrisGUI$1" sourceFile="TetrisGUI.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisGUI$2" sourceFile="TetrisGUI.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisGUI$3" sourceFile="TetrisGUI.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisGUI$4" sourceFile="TetrisGUI.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisGame" sourceFile="TetrisGame.java" interface="false" size="149" bugs="2" priority_2="2"/>
+      <ClassStats class="pat.game.Tetris.TetrisKeyListener" sourceFile="TetrisKeyListener.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="pat.game.Tetris.TetrisMouseListener" sourceFile="TetrisMouseListener.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1377" invocations="1688" avgMicrosecondsPerInvocation="816" maxMicrosecondsPerInvocation="41733" standardDeviationMircosecondsPerInvocation="2843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1066" invocations="1684" avgMicrosecondsPerInvocation="633" maxMicrosecondsPerInvocation="75848" standardDeviationMircosecondsPerInvocation="2340"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="977" invocations="2" avgMicrosecondsPerInvocation="488669" maxMicrosecondsPerInvocation="624167" standardDeviationMircosecondsPerInvocation="135499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="809" invocations="395" avgMicrosecondsPerInvocation="2049" maxMicrosecondsPerInvocation="38291" standardDeviationMircosecondsPerInvocation="4122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="754" invocations="395" avgMicrosecondsPerInvocation="1910" maxMicrosecondsPerInvocation="24878" standardDeviationMircosecondsPerInvocation="3496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="537" invocations="976" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="7741" standardDeviationMircosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="215" invocations="136" avgMicrosecondsPerInvocation="1588" maxMicrosecondsPerInvocation="27774" standardDeviationMircosecondsPerInvocation="3557"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="191" invocations="395" avgMicrosecondsPerInvocation="485" maxMicrosecondsPerInvocation="7768" standardDeviationMircosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="190" invocations="125" avgMicrosecondsPerInvocation="1522" maxMicrosecondsPerInvocation="19542" standardDeviationMircosecondsPerInvocation="2858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="178" invocations="131" avgMicrosecondsPerInvocation="1365" maxMicrosecondsPerInvocation="23238" standardDeviationMircosecondsPerInvocation="2936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="170" invocations="126" avgMicrosecondsPerInvocation="1354" maxMicrosecondsPerInvocation="19966" standardDeviationMircosecondsPerInvocation="2726"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="163" invocations="126" avgMicrosecondsPerInvocation="1295" maxMicrosecondsPerInvocation="28418" standardDeviationMircosecondsPerInvocation="3338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="158" invocations="395" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="55029" standardDeviationMircosecondsPerInvocation="2859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="155" invocations="395" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="25225" standardDeviationMircosecondsPerInvocation="2213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="141" invocations="395" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="7258" standardDeviationMircosecondsPerInvocation="591"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1459688352370" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
