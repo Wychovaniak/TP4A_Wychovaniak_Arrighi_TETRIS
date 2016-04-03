@@ -16,7 +16,7 @@ Envoie de ligne au cours du jeu
 
 #COMMENT JOUER:
 
-Ce deplacer :          Fleche G D B    OU Bouger la souris Molette pour descendre le block
+Ce deplacer :          Fleche G D B    OU Bouger la souris/Molette pour descendre le block
 
 Rotation:              Espace           OU Clic souris
 
